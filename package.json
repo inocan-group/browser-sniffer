@@ -1,6 +1,6 @@
 {
   "name": "@inocan/browser-sniffer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Sniff out browser traits/characteristics from within the browser or with the user agent string",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -11,7 +11,7 @@
     "clean": "rimraf dist/**",
     "build": "run-s clean autoindex build:bundle build:typings build:post",
     "build:bundle": "node ./build/build.js es cjs",
-    "build:typings": "tsc -P tsconfig.es.json",
+    "build:typings": "tsc -P tsconfig.es.json --declaration true --declarationDir dist/typings",
     "build:post": "rimraf dist/temp",
     "test": "yarn uvu tests -r ts-node/register"
   },
