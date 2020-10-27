@@ -1,9 +1,9 @@
-// #autoindex
+// #autoindex, exclude: shims-jshashes.d
 
 // #region autoindexed files
 
-// index last changed at: 10th Oct, 2020, 10:02 AM ( GMT-7 )
-// export: named; exclusions: index, private.
+// index last changed at: 10th Oct, 2020, 01:41 PM ( GMT-7 )
+// export: named; exclusions: shims-jshashes.d, index, private.
 // files: @types, deviceFingerprint, getBrowser, getColorDepth, getFlags, getLanguage, getOs, getPlugins, getResolution, getTimezone, getUserAgent, hasCanvasSupport, isOnline.
 
 // local file exports

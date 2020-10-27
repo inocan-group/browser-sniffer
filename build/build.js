@@ -56,12 +56,11 @@ const moduleConfig = (moduleSystem, minimized) => ({
       rootDir: ".",
       tsconfig: "tsconfig.es.json",
       target: minimized ? "es2015" : "esnext",
-      typescript: require("ttypescript"),
       declaration: false,
     }),
 
-    ...(moduleSystem === "es" && process.env.ANALYZE ? [analyze()] : []),
-    // ...(minimized ? [terser()] : []),
+    ...(moduleSystem === "es" ? [analyze()] : []),
+    ...(minimized ? [terser()] : []),
   ],
 });
 

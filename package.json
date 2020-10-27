@@ -12,7 +12,7 @@
     "build:bundle": "node ./build/build.js es cjs",
     "build:typings": "tsc -P tsconfig.es.json",
     "build:post": "rimraf dist/temp",
-    "test": "test"
+    "test": "yarn uvu tests -r ts-node/register"
   },
   "keywords": [
     "browser",
@@ -24,21 +24,22 @@
   "author": "Ken Snyder <ken@ken.net>",
   "license": "MIT",
   "dependencies": {
-    "jshashes": "^1.0.8",
+    "native-dash": "^1.4.0",
     "ua-parser-js": "^0.7.22"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@types/ua-parser-js": "^0.7.33",
+    "common-types": "^1.16.2",
     "do-devops": "^0.5.4",
     "npm-run-all": "^4.1.5",
     "rollup": "^2.32.1",
     "rollup-plugin-analyzer": "^3.3.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.28.0",
-    "ttypescript": "^1.5.12",
+    "ts-node": "^9.0.0",
     "typescript": "^4.0.5",
-    "typescript-transform-paths": "^2.0.2"
+    "uvu": "^0.3.4"
   }
 }
