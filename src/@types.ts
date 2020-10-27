@@ -1,3 +1,4 @@
+import { ms } from "common-types";
 export interface IBrowser {
   name: string;
   platform: string;
@@ -35,8 +36,52 @@ export interface IOnline {
   network: boolean;
 }
 
+export interface IOnlineOptions {
+  /**
+   * the URL which will be requested for validating network availability;
+   * by default this is `https://google.com`.
+   */
+  url: string;
+  /** Time to wait for HEAD network request; default is **500**ms. */
+  timeout: ms;
+}
+
 export interface IResolution {
   available: [width: number, height: number];
   current: [width: number, height: number];
   dpi?: [x: number, y: number];
+}
+
+export interface IBrowserFlags {
+  isIOS: boolean;
+  isAndroid: boolean;
+  isIPhone: boolean;
+  isIPad: boolean;
+
+  isWindows: boolean;
+  isMac: boolean;
+  isLinux: boolean;
+  isUbuntu: boolean;
+
+  isChrome: boolean;
+  isFirefox: boolean;
+  isSafari: boolean;
+  isMobileSafari: boolean;
+  isOpera: boolean;
+  isIE: boolean;
+
+  hasCanvasSupport: boolean;
+  hasTouchSupport: boolean;
+}
+
+export interface IBrowserProfile {
+  userAgent: string;
+  os: IOperatingSystem;
+  browser: IBrowser;
+  timezone: ITimezone;
+  resolution: IResolution;
+  colorDepth: number;
+  plugins: Plugin[];
+
+  flags: IBrowserFlags;
 }
