@@ -1,22 +1,29 @@
-export function getFlags() {
+import { IBrowserFlags } from "./@types";
+import { hasCanvasSupport, hasTouchSupport, getOs, getBrowser } from "./index";
+
+export function getFlags(): IBrowserFlags {
+  const browserName = getBrowser().name;
+  const osName = getOs().name;
+
   return {
-    isMobile: true,
-    isIOS: true,
-    isAndroid: true,
-    isIPhone: true,
-    isIPad: true,
+    isIOS: /iPhone|iPad|iPod/i.test(browserName),
+    isAndroid: /Android/i.test(browserName),
+    isIPhone: /iPhone/i.test(browserName),
+    isIPad: /iPad/i.test(browserName),
 
-    isDesktop: true,
-    isWindows: true,
-    isMac: true,
-    isLinux: true,
-    isUbuntu: true,
-    isSolaris: true,
+    isWindows: /Windows/i.test(osName),
+    isMac: /Mac/i.test(osName),
+    isLinux: /Linux|Ubuntu/i.test(osName),
+    isUbuntu: /Ubuntu/i.test(osName),
 
-    isChrome: true,
-    isFirefox: true,
-    isSafari: true,
-    isOpera: true,
-    isIE: true,
+    isChrome: /Chrome/i.test(browserName),
+    isFirefox: /Firefox/i.test(browserName),
+    isSafari: /Safari/i.test(browserName),
+    isMobileSafari: /Mobile\sSafari/i.test(browserName),
+    isOpera: /Opera/i.test(browserName),
+    isIE: /IE/i.test(browserName),
+
+    hasCanvasSupport: hasCanvasSupport(),
+    hasTouchSupport: hasTouchSupport(),
   };
 }

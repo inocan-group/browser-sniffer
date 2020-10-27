@@ -1,9 +1,10 @@
 {
-  "name": "browser-sniffer",
-  "version": "0.1.0",
+  "name": "@inocan/browser-sniffer",
+  "version": "0.2.0",
   "description": "Sniff out browser traits/characteristics from within the browser or with the user agent string",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
+  "typings": "dist/typings/index.js",
   "scripts": {
     "autoindex": "yarn do autoindex",
     "lint": "yarn tsc",
