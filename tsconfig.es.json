@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "noEmit": false,
+    "outDir": "dist/temp",
+    "declaration": true,
+    "declarationDir": "dist/typings",
+    "removeComments": false
+  },
+  "include": ["src"]
+}

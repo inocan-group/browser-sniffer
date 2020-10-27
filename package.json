@@ -1,0 +1,44 @@
+{
+  "name": "browser-sniffer",
+  "version": "0.1.0",
+  "description": "Sniff out browser traits/characteristics from within the browser or with the user agent string",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "scripts": {
+    "autoindex": "yarn do autoindex",
+    "lint": "yarn tsc",
+    "clean": "rimraf dist/**",
+    "build": "run-s clean autoindex build:bundle build:typings build:post",
+    "build:bundle": "node ./build/build.js es cjs",
+    "build:typings": "tsc -P tsconfig.es.json",
+    "build:post": "rimraf dist/temp",
+    "test": "test"
+  },
+  "keywords": [
+    "browser",
+    "detection",
+    "user-agent",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Ken Snyder <ken@ken.net>",
+  "license": "MIT",
+  "dependencies": {
+    "jshashes": "^1.0.8",
+    "ua-parser-js": "^0.7.22"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@types/ua-parser-js": "^0.7.33",
+    "do-devops": "^0.5.4",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.32.1",
+    "rollup-plugin-analyzer": "^3.3.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.0.5",
+    "typescript-transform-paths": "^2.0.2"
+  }
+}
