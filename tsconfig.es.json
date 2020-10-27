@@ -4,8 +4,7 @@
     "module": "esnext",
     "noEmit": false,
     "outDir": "dist/temp",
-    "declaration": true,
-    "declarationDir": "dist/typings",
+    "declaration": false,
     "removeComments": false
   },
   "include": ["src"]
