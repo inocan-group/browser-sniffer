@@ -1,4 +1,4 @@
-import { ITimezone } from "./@types";
+import { ITimezone } from "../@types";
 
 export function getTimezone(): ITimezone {
   const d = new Date();

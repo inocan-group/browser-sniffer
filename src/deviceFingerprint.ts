@@ -1,7 +1,7 @@
-import { getBrowser } from "./getBrowser";
-import { getOs } from "./getOs";
-import { getResolution } from "./getResolution";
-import { hasCanvasSupport } from "./hasCanvasSupport";
+import { getBrowser } from "./atomics/getBrowser";
+import { getOs } from "./atomics/getOs";
+import { getResolution } from "./atomics/getResolution";
+import { hasCanvasSupport } from "./atomics/hasCanvasSupport";
 import { hash } from "native-dash";
 
 /**

@@ -1,12 +1,12 @@
 import { getFlags } from "src";
 import { IBrowserProfile } from "./@types";
-import { getBrowser } from "./getBrowser";
-import { getColorDepth } from "./getColorDepth";
-import { getOs } from "./getOs";
-import { getPlugins } from "./getPlugins";
-import { getResolution } from "./getResolution";
-import { getTimezone } from "./getTimezone";
-import { getUserAgent } from "./getUserAgent";
+import { getBrowser } from "./atomics/getBrowser";
+import { getColorDepth } from "./atomics/getColorDepth";
+import { getOs } from "./atomics/getOs";
+import { getPlugins } from "./atomics/getPlugins";
+import { getResolution } from "./atomics/getResolution";
+import { getTimezone } from "./atomics/getTimezone";
+import { getUserAgent } from "./atomics/getUserAgent";
 
 /**
  * Returns comprehensive information that this library detected about the

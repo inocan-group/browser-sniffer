@@ -1,5 +1,5 @@
-import { IOperatingSystem } from "./@types";
-import { uaParse } from "./private/ua";
+import { IOperatingSystem } from "../@types";
+import { uaParse } from "../private/ua";
 
 export function getOs(uaString?: string): IOperatingSystem {
   const ua = uaParse(uaString);

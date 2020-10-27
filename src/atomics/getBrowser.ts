@@ -1,5 +1,5 @@
-import { IBrowser } from "./@types";
-import { uaParse } from "./private/ua";
+import { IBrowser } from "../@types";
+import { uaParse } from "../private/ua";
 
 export function getBrowser(uaString?: string): IBrowser {
   const ua = uaParse(uaString);

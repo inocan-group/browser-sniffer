@@ -1,4 +1,4 @@
-import { uaParse } from "./private/ua";
+import { uaParse } from "../private/ua";
 /**
  * looks for the **user agent** string in the browser's
  * global objects.

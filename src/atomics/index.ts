@@ -4,18 +4,19 @@
 
 // index last changed at: 10th Oct, 2020, 03:20 PM ( GMT-7 )
 // export: named; exclusions: index, private.
-// files: @types, deviceFingerprint, getFlags, getProfile, isOnline.
-// directories: atomics.
+// files: getBrowser, getColorDepth, getLanguage, getOs, getPlugins, getResolution, getTimezone, getUserAgent, hasCanvasSupport, hasTouchSupport.
 
 // local file exports
-export * from "./@types";
-export * from "./deviceFingerprint";
-export * from "./getFlags";
-export * from "./getProfile";
-export * from "./isOnline";
-
-// directory exports
-export * from "./atomics/index";
+export * from "./getBrowser";
+export * from "./getColorDepth";
+export * from "./getLanguage";
+export * from "./getOs";
+export * from "./getPlugins";
+export * from "./getResolution";
+export * from "./getTimezone";
+export * from "./getUserAgent";
+export * from "./hasCanvasSupport";
+export * from "./hasTouchSupport";
 
 // Note:
 // -----

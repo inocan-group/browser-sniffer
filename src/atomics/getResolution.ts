@@ -1,4 +1,4 @@
-import { IResolution } from "./@types";
+import { IResolution } from "../@types";
 
 export function getResolution(): IResolution {
   return {
